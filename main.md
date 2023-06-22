@@ -31,8 +31,8 @@ section {
 VAST June 2023
 # Gradus.jl
 
-![w:200px](./logo.png)
-![w:200px](./University_of_Bristol_logo.png)
+![w:200px](./assets/logo.png)
+![w:200px](./assets/University_of_Bristol_logo.png)
 
 **Fergus Baker**, Andrew Young
 University of Bristol
@@ -48,7 +48,7 @@ University of Bristol
 - Photon trajectory distorted by **spacetime curvature**
 - Curvature encoded in the **metric** $g_{\mu\nu}$
 
-![80%](./geodesics.gif)
+![80%](./assets/geodesics.gif)
 
 ---
 
@@ -90,7 +90,7 @@ University of Bristol
 
 #### Example: A user defined metric, disc, and corona
 
-![h:30](./drawing.svg)
+![h:30](./assets/drawing.svg)
 
 Specifying the metric parameters ...
 
@@ -157,7 +157,7 @@ Gradus.emissivity_coefficient(m::AbstractMetric, d::SlabDisc, x, ν) =
 
 # instantiate and compose
 slab = SlabDisc(4.0, 20.0, 0.1)
-disc = GeometricThinDisc(Gradus.isco(m), 50.0, π/2) ∘ slab
+disc = GeometricThinDisc(Gradus.isco(metric), 50.0, π/2) ∘ slab
 ```
 
 ---
@@ -236,7 +236,7 @@ pf = PointFunction(
 a, b, image = @time rendergeodesics(metric, x, disc)
 ```
 
-![h:350](./render.png)
+![h:350](./assets/render.png)
 
 ---
 
@@ -245,7 +245,7 @@ Calculate how the corona illuminates the disc:
 ep = @time emissivity_profile(metric, disc, corona) |> RadialDiscProfile
 ```
 
-![h:300](./emissivities.svg)
+![h:300](./assets/emissivities.svg)
 
 ---
 
@@ -258,7 +258,7 @@ rtf = @time lagtransfer(m, x, disc, corona)
 t, E, f = binflux(rtf, ep)
 ```
 
-![h:340](./test.png)
+![h:340](./assets/test.png)
 
 ---
 
@@ -275,7 +275,7 @@ Simple to modify:
 +  corona = LampPost(slab.height)
 ```
 
-![h:300](./precesion-redshift-test-3.gif)
+![h:300](./assets/precesion.gif)
 
 ---
 
