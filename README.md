@@ -2,7 +2,7 @@
 
 Slides from a [VAST](https://vast-seminars.github.io/) lightning talk about [Gradus.jl](https://github.com/astro-group-bristol/Gradus.jl) on the 21st of June 2023.
 
-- See the slides [in your browser](TODO).
+- See the slides [in your browser](https://fjebaker.github.io/vast-gradus-talk-june-2023/).
 
 Recording will be linked when published.
 
